@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-500:#2D2D2D;
+  --color-avocado-300:#FFD166;
+  --color-accent1:#FF6B6B;
+  --color-primary:#2A5C82;
+  --color-secondary:#3AAFA9;
+  --color-neutral:#2D3436;
+  /* ... */
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #00000000;
+    border-radius: 5px;
+    padding: 1rem;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e26666;
+    border-radius: 5px;
+    width: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fff1f1;
+}
