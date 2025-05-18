@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchcredits, fetchimages } from "../services/api";
 import Loader from "./Loader";
 import Navbar from "./Navbar";
-import Cast from "./cast";
+import Cast from "./Cast";
 
 
 function MoviesDetails() {
