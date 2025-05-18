@@ -30,11 +30,13 @@ function SearchBar() {
 
   return (
     <>
-    <div className='w-full md:mt-6 mt-1 bg-neutral flex items-center rounded-lg p-3 overflow-hidden gap-4'>
-        <input className={`w-full outline-none text-white placeholder:text-white `} type="text"  placeholder='Search Movies' value={input} onChange={(e)=>{
+    <div className='w-full md:mt-6 mt-1 bg-neutral flex items-center rounded-lg md:p-3 p-1 overflow-hidden gap-4'>
+        <input className={`w-full outline-none not-md:text-sm not-md:pl-2 text-white placeholder:text-white `} type="text"  placeholder='Search Movies' value={input} onChange={(e)=>{
  setinput(e.target.value) 
- }} onKeyUp={(e)=>{e.key == "Enter" && handleSearch()}}/>
-        <button className='bg-accent1 px-2 py-1 h-[fit-content] text-white rounded-lg cursor-pointer flex items-center ' onClick={handleSearch}>Search</button>
+ }} onKeyUp={(e)=>{e.key == "Enter" && handleSearch()
+  KeyboardEvent()
+ }}/>
+        <button className='bg-accent1 px-2 py-1 h-[fit-content] not-md:text-xs not-md:px-3 not-md:py-2 text-white rounded-lg cursor-pointer flex items-center ' onClick={handleSearch}>Search</button>
     </div>
     </> 
   )
