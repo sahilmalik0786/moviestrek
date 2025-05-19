@@ -30,7 +30,7 @@ export const fetchMovies = async (query , endurl)=>{
 }
 
 export const fetchimages = async (id)=>{
-  const endpoint = `${TMDB_CONFIG.BASE_URL}/movie/${id}?language=en-US`
+  const endpoint = `${TMDB_CONFIG.BASE_URL}/movie/${id}?append_to_response=recommendations%2Cvideos%2Ccredits&language=en-US`
     const response = await fetch(endpoint , {
         method: 'Get',
         headers : TMDB_CONFIG.headers,
@@ -45,8 +45,8 @@ export const fetchimages = async (id)=>{
     return data
 }
 
-export const fetchvideos = async (id)=>{
-  const endpoint = `${TMDB_CONFIG.BASE_URL}/movie/${id}?language=en-US`
+export const fetchrandomimages = async (id)=>{
+  const endpoint = `${TMDB_CONFIG.BASE_URL}/movie/${id}/images`
     const response = await fetch(endpoint , {
         method: 'Get',
         headers : TMDB_CONFIG.headers,
@@ -61,18 +61,3 @@ export const fetchvideos = async (id)=>{
     return data
 }
 
-export const fetchcredits = async (id)=>{
-  const endpoint = `${TMDB_CONFIG.BASE_URL}/movie/${id}/credits`
-    const response = await fetch(endpoint , {
-        method: 'Get',
-        headers : TMDB_CONFIG.headers,
-    })
-
-    if(!response.ok){
-        throw new Error('failed to fetch images' , response.statusText)
-
-    }
-
-    const data  = await response.json()
-    return data
-}

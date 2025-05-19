@@ -9,9 +9,11 @@ function Routing() {
   
   return (
     <Routes>
+      
         <Route path={'/'} element={<Home />} />
         <Route path={`/movies/:id`} element={<MoviesDetails />} />
-         
+      
+      
         
     </Routes>
   )

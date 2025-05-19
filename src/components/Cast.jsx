@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Cast({details}) {
   const {profile_path , name ,character} = details
-  console.log(details)
+ 
 
   return (
     <div className={`md:w-64 md:h-80 w-40 h-72  bg-linear-to-r from-cyan-500/30 to-blue-500/20 flex flex-col  rounded-2xl  p-2 shrink-0`}>
