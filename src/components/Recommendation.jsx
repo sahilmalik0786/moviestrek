@@ -8,7 +8,7 @@ function Recommendation() {
             <div className='w-full h-1/6 bg-red-200/10 absolute -bottom-53  group-hover:bottom-0 transition-all'></div>
             </div>
              <div className='p-2 text-white mt-1'>
-            hsdlkfl
+            hsdlkk
 
         </div>
         </div>
