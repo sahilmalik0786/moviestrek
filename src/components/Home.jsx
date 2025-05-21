@@ -9,27 +9,29 @@ import TrendingMovies from './TrendingMovies'
 import { searchTerm } from '../context/Context'
 import Header from './Header'
 import { ErrorBoundary } from 'react-error-boundary'
+// import InfoSection from './InfoSection'
 
-  
+
 function Home() {
- const [input , setinput , data , setData ,loading , setloading] =  useContext(searchTerm)
-  
+  const [input, setinput, data, setData, loading, setloading] = useContext(searchTerm)
+
 
 
   return (
-    
-   <div className="w-full bg-slate-900 font-mono flex flex-col md:p-10 p-3 scroll-smooth ">
-      
+
+    <div className="w-full bg-slate-900 font-mono flex flex-col md:p-10 p-3 scroll-smooth ">
+
       <Navbar />
       <Header />
-      {loading !=null && <SearchedMovies />}
-      {loading && <Loader/>}
-     <ErrorBoundary fallback={<p className='text-black text-xl'>Something went wrong</p>}>
-  <MoviesSection />
-</ErrorBoundary>
+      {loading != null && <SearchedMovies />}
+      {loading && <Loader />}
+      <ErrorBoundary fallback={<p className='text-black text-xl'>Something went wrong</p>}>
+        <MoviesSection />
+      </ErrorBoundary>
+      {/* <InfoSection /> */}
       <TrendingMovies />
-      
-     
+
+
     </div>
   )
 }
